@@ -3,104 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>外卖好评一键复制</title>
+  <title>外卖好评 · 单条复制</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-      padding: 20px;
-      background: #f5f5f5;
+      padding: 15px;
+      background: #f9f9f9;
       color: #333;
-      line-height: 1.6;
     }
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    .container {
+      max-width: 600px;
       margin: 0 auto;
-      max-width: 500px;
     }
     h1 {
       text-align: center;
       color: #e74c3c;
-      margin-top: 0;
+      margin-bottom: 20px;
     }
-    pre {
-      background: #f9f9f9;
-      padding: 16px;
-      border-radius: 8px;
-      white-space: pre-wrap;
-      word-break: break-word;
+    .review-item {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    .review-text {
+      margin: 0 0 10px 0;
+      line-height: 1.5;
       font-size: 16px;
-      margin: 15px 0;
-      border: 1px solid #eee;
     }
-    button {
-      width: 100%;
-      padding: 14px;
-      font-size: 18px;
-      background: #2ecc71;
+    .copy-btn {
+      background: #3498db;
       color: white;
       border: none;
-      border-radius: 8px;
+      padding: 6px 12px;
+      border-radius: 6px;
       cursor: pointer;
-      font-weight: bold;
-      margin-top: 10px;
+      font-size: 14px;
+      float: right;
     }
-    button:hover {
-      background: #27ae60;
+    .copy-btn:hover {
+      background: #2980b9;
     }
     .tip {
       text-align: center;
       font-size: 14px;
-      color: #888;
-      margin-top: 15px;
+      color: #777;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>📦 外卖好评模板</h1>
-    <pre id="text">1. 包装精美，配送超快，必须五星好评！
-2. 食材新鲜，味道超赞，下次还会点！
-3. 老板人超好，还多送了小菜，感动！
-4. 分量足，价格实惠，吃得特别满足！
-5. 准时送达，饭菜还是热乎的，太棒了！
-6. 每次点这家都从不踩雷，强烈推荐！
-7. 配送员态度很好，餐品完好无损！
-8. 味道正宗，跟堂食几乎没差别！
-9. 干净卫生，吃得放心，给家人点也安心！
-10. 性价比超高，学生党福音，已安利给全宿舍！</pre>
-    <button onclick="copyText()">✅ 一键复制全部好评</button>
-    <div class="tip">复制后可直接粘贴到美团/饿了么评价框</div>
+  <div class="container">
+    <h1>📦 外卖好评 · 单条复制</h1>
+
+    <div class="review-item">
+      <div class="review-text">1. 包装严实无洒漏，配送超快还热乎，必须五星好评！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">2. 食材新鲜看得见，味道媲美堂食，下次还点这家！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">3. 老板太贴心了，备注少辣多葱全满足，感动！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">4. 分量足到吃不完，两人点三菜还打包，超值！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">5. 暴雨天准时送达，骑手态度好，饭菜暖胃又暖心！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">6. 连续一周点他家，口味稳定不踩雷，真爱粉！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">7. 餐具独立包装，米饭软硬适中，细节满分！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">8. 招牌菜还原度超高，汤底浓郁到想舔碗！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">9. 干净卫生吃得放心，给家人点也毫无顾虑！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="review-item">
+      <div class="review-text">10. 人均20吃到撑，性价比之王，学生党福音！</div>
+      <button class="copy-btn" onclick="copyText(this)">复制</button>
+    </div>
+
+    <div class="tip">点击“复制”按钮 → 自动复制该条好评 → 粘贴到外卖平台即可</div>
   </div>
 
   <script>
-    function copyText() {
-      const text = document.getElementById('text').innerText;
+    function copyText(button) {
+      const text = button.previousElementSibling.innerText;
       if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(() => {
-          alert('🎉 复制成功！快去粘贴吧～');
-        }).catch(fallbackCopy);
+          const original = button.innerText;
+          button.innerText = '已复制';
+          setTimeout(() => button.innerText = original, 1500);
+        });
       } else {
-        fallbackCopy();
+        // 兼容旧浏览器
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          const original = button.innerText;
+          button.innerText = '已复制';
+          setTimeout(() => button.innerText = original, 1500);
+        } catch (err) {
+          alert('复制失败，请手动选择文本复制');
+        }
+        document.body.removeChild(textarea);
       }
-    }
-
-    function fallbackCopy() {
-      const textarea = document.createElement('textarea');
-      textarea.value = document.getElementById('text').innerText;
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      try {
-        document.execCommand('copy');
-        alert('🎉 复制成功！（兼容模式）');
-      } catch (err) {
-        alert('❌ 请手动长按选择文本复制');
-      }
-      document.body.removeChild(textarea);
     }
   </script>
 </body>
